@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.activity.MangaDetail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#959595">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/icons8_left_36"
+            android:contentDescription="Back"/>
+
+        <TextView
+            android:id="@+id/txtNameManga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#959595"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="Chi tiết Truyện"
+            android:textAlignment="viewStart"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="115dp"
+                android:layout_height="150dp"
+                android:src="@drawable/test"/>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:id="@+id/txtAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tác giả: "
+                android:paddingBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/txtGenres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thể loại: "
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:id="@+id/txtFollow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lượt theo dõi: "
+                android:paddingBottom="4dp" />
+
+            <Button
+                android:id="@+id/btnReadHead"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:backgroundTint="#8bc34a"
+                android:text="Đọc từ đầu"
+                android:maxLines="1"/>
+
+            <Button
+                android:id="@+id/btnFollow"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:backgroundTint="#ff3860"
+                android:text="Theo dõi"
+                android:maxLines="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Giới Thiệu"
+        android:paddingLeft="12dp"
+        android:paddingBottom="2dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/bg_describle">
+
+            <TextView
+                android:id="@+id/txtDescrible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Describle" />
+    </ScrollView>
+
+    <ListView
+        android:id="@+id/lstChapter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

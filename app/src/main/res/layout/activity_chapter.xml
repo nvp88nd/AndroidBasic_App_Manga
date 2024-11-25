@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.activity.Chapter">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#959595">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="96dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:contentDescription="Back"
+                app:srcCompat="@drawable/icons8_left_36" />
+
+            <TextView
+                android:id="@+id/txtNameChapter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#959595"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="Chi tiết Chapter"
+                android:textAlignment="viewStart"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lstImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:divider="@android:color/transparent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp">
+            =
+
+            <ImageButton
+                android:id="@+id/imgBtnBefore"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/btn_chapter"
+                android:backgroundTint="#959595"
+                android:contentDescription="chap before"
+                app:srcCompat="@drawable/icons8_left_30" />
+
+            <Button
+                android:id="@+id/btnChapSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_chapter"
+                android:text="Chapter 1" />
+
+            <ImageButton
+                android:id="@+id/imgBtnAfter"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/btn_chapter"
+                android:backgroundTint="#959595"
+                android:contentDescription="chap after"
+                app:srcCompat="@drawable/icons8_right_30" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/dialog_list_chap"/>
+
+</LinearLayout>
