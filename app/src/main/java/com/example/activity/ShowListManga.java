@@ -29,7 +29,7 @@ import java.util.ArrayList;
 
 public class ShowListManga extends AppCompatActivity {
 
-    TextView tvNameList;
+    TextView tvNameList, tvNullList;
     ImageButton ibBack;
     String type, sql;
     String[] seletionArgs;
@@ -69,6 +69,7 @@ public class ShowListManga extends AppCompatActivity {
 
     private void getObj() {
         tvNameList = findViewById(R.id.tvNameList);
+        tvNullList = findViewById(R.id.tvNullList);
         ibBack = findViewById(R.id.ibBack);
     }
 
@@ -131,6 +132,9 @@ public class ShowListManga extends AppCompatActivity {
                 lstManga.add(manga);
             } while (cursor.moveToNext());
             cursor.close();
+        }
+        else {
+            tvNullList.setVisibility(View.VISIBLE);
         }
 
         AdapterView.OnItemClickListener itemClickListener = new AdapterView.OnItemClickListener() {

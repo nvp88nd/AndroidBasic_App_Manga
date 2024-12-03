@@ -22,6 +22,15 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/tvNullListFollow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textSize="20dp"
+        android:text="Bạn chưa theo dõi truyện nào!"
+        android:visibility="gone"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvFollow"
         android:layout_width="match_parent"

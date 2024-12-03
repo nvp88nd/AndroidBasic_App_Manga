@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.TextView;
 
 import com.example.adapter.RvDoubleAdapter;
 import com.example.activity.MangaDetail;
@@ -37,6 +38,8 @@ public class FollowFragment extends Fragment {
     RvDoubleAdapter rvDoubleAdapter;
     DatabaseHelper dbHelper;
     SQLiteDatabase db;
+
+    TextView tvNullListFollow;
 
     private SharedPreferences preferences;
 
@@ -91,6 +94,7 @@ public class FollowFragment extends Fragment {
 
     public void callRecycleView(View view) {
         rv = view.findViewById(R.id.rvFollow);
+        tvNullListFollow = view.findViewById(R.id.tvNullListFollow);
 
         dbHelper = new DatabaseHelper(requireContext());
         db = dbHelper.getWritableDatabase();
@@ -107,6 +111,9 @@ public class FollowFragment extends Fragment {
                 lstManga.add(manga);
             } while (cursor.moveToNext());
             cursor.close();
+        }
+        else {
+            tvNullListFollow.setVisibility(View.VISIBLE);
         }
 
         AdapterView.OnItemClickListener itemClickListener = new AdapterView.OnItemClickListener() {
